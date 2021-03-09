@@ -14,9 +14,6 @@ List* listPtr = &list;
 
 void* operator new(size_t size)
 {
-    cout << "New operator overloading " << endl;
-
-
     if (colPtr->empty())
     {
         cout << "Collector Empty" << endl;
@@ -24,7 +21,6 @@ void* operator new(size_t size)
         return p;
     }
     else {
-        cout << "Collector being used" << endl;
         void* reuse = colPtr->get_last();
         colPtr->deleteLast();
         return reuse;
