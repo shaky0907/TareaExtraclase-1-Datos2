@@ -16,7 +16,7 @@ void* operator new(size_t size)
 {
     if (colPtr->empty())
     {
-        cout << "Collector Empty" << endl;
+        
         void* p = malloc(size);
         return p;
     }
